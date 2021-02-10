@@ -3,7 +3,7 @@ board를 90도 회전하면
 for i in board:
     for doll in i:
         ~~
-로 접근할 수 있을듯
+로 접근할 수 있을 듯
 """
 def solution(board, moves):
     answer = 0
