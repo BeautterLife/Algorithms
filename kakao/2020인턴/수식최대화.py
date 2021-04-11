@@ -10,12 +10,14 @@ def solution(expression):
     arr = [prior_converter2(arr_plus_minus,'-'),prior_converter2(arr_plus_mult,'*'),prior_converter2(arr_minus_plus,'+'),prior_converter2(arr_minus_mult,'*'), prior_converter2(arr_mult_plus,'+'),prior_converter2(arr_mult_minus,'-')]
 
     arr_op = ['+','+','-','-','*','*']
-    answer=[]
+    #answer=[]
+    answer = 0
     
     for i,ex in enumerate(arr):
-        answer.append(abs(eval(arr_op[i].join(ex))))
-    
-    return sorted(answer)[-1]
+        #answer.append(abs(eval(arr_op[i].join(ex))))
+        answer = max(abs(eval(arr_op[i].join(ex))))
+    #return sorted(answer)[-1]
+    return answer 
 
 def prior_converter1(expression, operator1):
     return expression.split(operator1)
