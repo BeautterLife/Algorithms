@@ -28,6 +28,7 @@ def solution(priorities, location):
         # dq에 현재 문서보다 우선순위 문서가 있으면 뒤로감
         # 없으면 dq에서 제거처리, wait 증가
         for num in counter: 
+            # counter[num]으로 잘못써서 시간낭비
             if top < num:
                 dq.append(top)
                 break  
