@@ -10,6 +10,8 @@ def solution(n, lost, reserve):
         elif i+1 in reserve_set:
             reserve_set.remove(i+1)
             answer+=1
+            
+        # 여벌 체육복 다 빌려주면 종료
         elif not reserve_set:
             break
             
