@@ -3,16 +3,18 @@ def isSorted(input):
   
   previous = input[0]
   for num in input[1:]:
-    if isDown and num > previous:
-      isDown = False
-    if isUp and num < previous:
-      isUp = False
-    previous = num
-
-    if not(isUp and isUp):
+    if isUp:
+      isUp = previous <= num
+      
+    if isDown:
+      isDown = previous >=num
+      
+    if not(isUp or isDown):
         return False
+    
+    previous = num
   
-  return isUp or isDown
+  return True
 
 print(isSorted([1,2,3,4,5]))
 print(isSorted([1,2,3,4,5,3]))
