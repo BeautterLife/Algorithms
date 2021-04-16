@@ -6,6 +6,7 @@ def solution(n, edge):
     
     graph = {i:set() for i in range(1,n+1)} # node i 와 연결된 node 추가하기위해 {node번호:empty set}을 원소로 갖는 dictionary
     # 양방향 간선 추가
+    # dict[key] key가 없는 경우 key error 리턴.
     for a,b in edge:
         graph[a].add(b)
         graph[b].add(a)
