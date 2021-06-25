@@ -18,4 +18,5 @@ def solution(n, arr1, arr2):
           
         # 만든 string의 역순
         answer.append(string[::-1])
+        
     return answer
